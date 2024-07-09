@@ -1,4 +1,14 @@
-### React - useDocumentVisibility
+## Этапы установки проекта
+* Клонирование из ветки feature 
+```git clone -b feature https://github.com/kseniakap/npm-module-webbee.git```
+* Установка зависимостей
+``` npm i ```
+или 
+```npm install```
+## Запуск проекта
+```npm run start```
+
+# React - useDocumentVisibility
 Стек: React, typescript (опционален), сборка - microbundle/rollup
 
 React hook, который
@@ -8,7 +18,7 @@ React hook, который
 * предоставит функцию, в которой можно подписаться на изменение активности (видимости) текущей вкладки
 Замечание: речь про "вкладка активна(видна)/неактивна", а не "вкладка в фокусе/не фокусе", это важно.
 
-# Пример работы хука
+## Пример работы хука
 useDocumentVisibility.ts
 ```typescript
 import React from 'react'
@@ -40,12 +50,12 @@ const LeaveTabCounter = () => {
 };
 ```
 
-### React - react-responsive
+# React - react-responsive
 Стек: React, typescript, сборка - microbundle/rollup
 
 Надо реализовать react hook и компонент для работы с https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList
 
-# Пример работы хука
+## Пример работы хука
 useMediaQuery.ts
 
 ```typescript
@@ -71,7 +81,7 @@ const Example = () => {
   </div>
 }
 ```
-# Пример работы компонента
+## Пример работы компонента
 MediaQuery.tsx
 
 ```typescript
