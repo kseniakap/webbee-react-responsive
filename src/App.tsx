@@ -1,9 +1,11 @@
-import { ExampleHook } from './components/ExampleHook'
+import { ExampleHook } from './test/ExampleHook'
+import { ExampleMediaQuery } from './test/ExampleMediaQuery'
 
 function App() {
   return (
     <>
       <ExampleHook />
+      <ExampleMediaQuery/>
     </>
   )
 }

@@ -9,7 +9,6 @@ export const useMediaQuery = ({ query }: MediaQueryProps) => {
 
   useEffect(() => {
     const mediaQueryList = window.matchMedia(query)
-
     const updateMatch = (e: MediaQueryListEvent) => setIsMatch(e.matches)
 
     mediaQueryList.addEventListener('change', updateMatch)
