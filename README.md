@@ -1,54 +1,12 @@
 ## Этапы установки проекта
 * Клонирование из ветки feature 
-```git clone -b feature https://github.com/kseniakap/npm-module-webbee.git```
+```git clone -b feature https://github.com/kseniakap/webbee-react-responsive.git```
 * Установка зависимостей
 ``` npm i ```
 или 
 ```npm install```
 ## Запуск проекта
 ```npm run start```
-
-# React - useDocumentVisibility
-Стек: React, typescript (опционален), сборка - microbundle/rollup
-
-React hook, который
-
-* скажет, активна (видна) ли сейчас вкладку браузера
-* скажет, сколько раз с момента инициализации компонента вкладка становилась неактивной (невидимой)
-* предоставит функцию, в которой можно подписаться на изменение активности (видимости) текущей вкладки
-Замечание: речь про "вкладка активна(видна)/неактивна", а не "вкладка в фокусе/не фокусе", это важно.
-
-## Пример работы хука
-useDocumentVisibility.ts
-```typescript
-import React from 'react'
-import { useDocumentVisibility } from '@my-npm-user/react-document-visibility'
-
-const LeaveTabCounter = () => {
-  const { count, visible, onVisibilityChange } = useDocumentVisibility();
-
-  useEffect(() => {
-    onVisibilityChange((isVisible) => {
-      console.log('first handler', isVisible)
-    });
-
-    const unsubscribeSecondHandler = onVisibilityChange((isVisible) => {
-      console.log('second handler', isVisible)
-    });
-
-    setTimeout(() => unsubscribeSecondHandler(), 5000); // отписываемся от 'second handler' через 5 секунд
-  }, [])
-
-  return (
-    <div>
-      <span>
-        Вы покинули страницу: {count} раз
-        Вкладка активна? {visible ? 'да' : 'нет'}
-      </span>
-    </div>
-  );
-};
-```
 
 # React - react-responsive
 Стек: React, typescript, сборка - microbundle/rollup
