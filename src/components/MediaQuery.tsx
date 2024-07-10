@@ -3,14 +3,14 @@ import { MediaQueryEnum, MediaQueryProps } from '../types'
 
 function createStringMedia(param: string, value?: string | number): string {
   if (value) {
+    const isString = typeof value === 'string'
     if (
       param === MediaQueryEnum.minResolution ||
-      param === MediaQueryEnum.maxResolution ||
-      param === MediaQueryEnum.orientation
+      param === MediaQueryEnum.maxResolution
     ) {
-      return `(${param}: ${value})`
+      return `(${param}: ${isString ? value : value + 'dppx'})`
     } else {
-      return `(${param}: ${value}px)`
+      return `(${param}: ${isString ? value : value + 'px'})`
     }
   }
   return ''
