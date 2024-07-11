@@ -1,4 +1,4 @@
-import { useMediaQuery } from '../hooks/useMediaQuery'
+import { useMediaQuery } from '@kseniakap/media-query'
 import { MediaQueryEnum, MediaQueryProps } from '../types'
 
 function createStringMedia(param: string, value?: string | number): string {
