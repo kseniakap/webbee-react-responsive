@@ -29,6 +29,6 @@
     ]
   },
   "dependencies": {
-    "@kseniakap/media-query": "^1.0.0"
+    "@kseniakap/media-query": "^1.0.2"
   }
 }
