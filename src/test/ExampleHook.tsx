@@ -1,4 +1,4 @@
-import { useMediaQuery } from '../hooks/useMediaQuery'
+import { useMediaQuery } from '@kseniakap/media-query'
 
 export const ExampleHook = () => {
   const isDesktopOrLaptop = useMediaQuery({
@@ -11,7 +11,7 @@ export const ExampleHook = () => {
 
   return (
     <div>
-      <h1>Device Test!</h1>
+      <h1>Device Test! (хук useMediaQuery.ts)</h1>
       {isDesktopOrLaptop && <p>You are a desktop or laptop</p>}
       {isBigScreen && <p>You have a huge screen</p>}
       {isTabletOrMobile && <p>You are a tablet or mobile phone</p>}

@@ -1,8 +1,8 @@
-import MediaQuery from '../components/MediaQuery'
+import MediaQuery from '@kseniakap/media-query'
 
 export const ExampleMediaQuery = () => (
   <div>
-    <h1>Device Test!</h1>
+    <h1>Device Test!(компонент MediaQuery.tsx)</h1>
     <MediaQuery minWidth={1224}>
       <p>You are a desktop or laptop</p>
       <MediaQuery minWidth={1824}>

@@ -37,15 +37,17 @@ function MediaQuery(props: MediaQueryProps) {
 
   const isMatch = useMediaQuery({ query })
 
-  return (
-    <>
-      {typeof children === 'function'
-        ? children(isMatch)
-        : isMatch
-        ? children
-        : null}
-    </>
-  )
+  {
+    if (typeof children === 'function') {
+      return children(isMatch)
+    } else {
+      if (isMatch) {
+        return children
+      } else {
+        return null
+      }
+    }
+  }
 }
 
 export default MediaQuery

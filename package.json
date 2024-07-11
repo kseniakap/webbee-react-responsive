@@ -27,5 +27,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "@kseniakap/media-query": "^1.0.0"
   }
 }
